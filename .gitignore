@@ -1,0 +1,38 @@
+# ---- 构建产物 ----
+build/
+build_qml/
+build_qml_work*/
+dist/
+dist_*/
+installer/*.exe
+*.spec.bak
+
+# ---- 运行/调试产物 ----
+*.log
+.firstframe
+__pycache__/
+*.py[cod]
+*.m41
+_m*.py
+tests/out/
+# 探针截图每次运行都刷新（文件名里带随机 fid），不入库
+
+# ---- 本地数据（绝不入库）----
+store/
+.devstore/
+*_内部资料/
+docs_private/
+
+# ---- 编辑器/系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 字体上游备份（体积大且非构建必需）----
+fonts_upstream_backup/
+
+# 测试截图全部是运行产物（每次跑都会重写），不入库
+# （smoke_*.png 以前被跟踪，导致 git status 永远是脏的）
+tests/artifacts/
